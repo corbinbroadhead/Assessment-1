@@ -10,6 +10,7 @@
 */
 
 //CODE HERE
+var gitDefinition = "Git is how you take snapshots of what your code looks like at various points of developing it. It allows you to see old code if you ever run into problems after writing some new code.";
 
 //////////////////PROBLEM 2////////////////////
 /*
@@ -18,6 +19,7 @@
 */
 
 //CODE HERE
+var gitHubDefinition = "GitHub is a place where you can store and easily access your gits, see others' gits, and collaborate with others.";
 
 //////////////////PROBLEM 3////////////////////
 /*
@@ -26,6 +28,7 @@
 */
 
 //CODE HERE
+var gitInitDefinition = "Git init is how you tell your system that you are going to be using git with whatever document(s) you currently have open. It will tell the system to prepare itself for further git commands.";
 
 //////////////////PROBLEM 4////////////////////
 /*
@@ -34,6 +37,7 @@
 */
 
 //CODE HERE
+var gitCloneDefinition = "Git clone will allow you to clone a git repository and make a copy of it in another location.";
 
 //////////////////PROBLEM 5////////////////////
 /*
@@ -42,6 +46,7 @@
 */
 
 //CODE HERE
+var gitStatusDefinition = "Git status will let you know the status of any changes you have made, whether they have been added to the next git commit or not and if they have been committed.";
 
 //////////////////PROBLEM 6////////////////////
 /*
@@ -53,6 +58,8 @@
 */
 
 //CODE HERE
+var gitAddDefinition = "Git add will add anything you command it to into the next commit. This is how you let git know where to point the camera, if you will.";
+var gitAddCode = "git add .";
 
 //////////////////PROBLEM 7////////////////////
 /*
@@ -64,7 +71,8 @@
 */
 
 //CODE HERE
-
+var gitCommitDefinition = "Git commit is how you are going to take the snapshot. This is where you tell git to take the picture, if you will.";
+var gitCommitCode = 'git commit -m "initial commit"';
 
 //////////////////PROBLEM 8////////////////////
 /*
@@ -73,3 +81,4 @@
 */
 
 //CODE HERE
+var gitPushDefinition = "Git push is how you send your snapshot to GitHub so that it can be properly stored."
