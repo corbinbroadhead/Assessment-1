@@ -50,9 +50,27 @@ const pinkPrice = .55
 */
 
 // CODE HERE
+var totalAcres = 0;
+        for (let e = 0; e < fujiAcres.length; e++) {
+            totalAcres = totalAcres + fujiAcres[e];
+        }
+        for (let e = 0; e < galaAcres.length; e++) {
+            totalAcres = totalAcres + galaAcres[e];
+        }
+        for (let e = 0; e < pinkAcres.length; e++) {
+            totalAcres = totalAcres + pinkAcres[e];
+        }
+    
+console.log(totalAcres);
 
-
-
+/* 
+        I first thought that I would use the same formula to count the acres
+        that are picked in the arrays and add them together using a for loop
+        that would run 3 times, but I realized that each array would require
+        a unique formula. So instead of creating one for loop that ran three
+        times, I would create three for loops that each ran 7 times, with a 
+        running totalAcres value.
+/*
 
 
 // PROBLEM 2
@@ -68,9 +86,15 @@ const pinkPrice = .55
 */
 
 // CODE HERE
+var averageDailyAcres = totalAcres / galaAcres.length;
+console.log(averageDailyAcres);
 
-
-
+/*
+        I wanted to create a dynamic formula that would update if we 
+        decided to change how many days we tracked inside of an array. 
+        Simply putting the divisor as 7 would have worked for now, but would
+        easily become a problem if the number of days tracked ever changed.
+/*
 
 
 // PROBLEM 3
@@ -106,7 +130,11 @@ let acresLeft = 174
 let days = 0
 
 // CODE HERE
-
+while (acresLeft > 0) {
+    days++;
+    acresLeft = acresLeft - averageDailyAcres;
+} 
+console.log(days);
 
 
 // PROBLEM 4
@@ -134,15 +162,31 @@ let days = 0
 */
 
 // CODE HERE
+let averageApplesPerAcre = 6.5;
+fujiTons = fujiAcres.slice(0, 7);
+galaTons = galaAcres.slice(0, 7);
+pinkTons = pinkAcres.slice(0, 7);
 
-// let fujiTons =
-// let galaTons =
-// let pinkTons =
+for (let i = 0; i < fujiTons.length; i++) {
+    fujiTons[i] = fujiTons[i] * averageApplesPerAcre;
+}
+for (let i = 0; i < galaTons.length; i++) {
+    galaTons[i] = galaTons[i] * averageApplesPerAcre;
+}
+for (let i = 0; i < pinkTons.length; i++) {
+    pinkTons[i] = pinkTons[i] * averageApplesPerAcre;
+}
 
+console.log(fujiTons);
+console.log(galaTons);
+console.log(pinkTons);
 
-
-
-
+/*
+    I figured that this was another case where the easiest solution would be
+    to create three for loops that manipulated the new arrays by simply 
+    multiplying the amount of acres harvested by the average apples per acre
+    harvested (in tons).
+/*
 
 // PROBLEM 5
 
@@ -161,15 +205,27 @@ let days = 0
 */
 
 // CODE HERE 
+var fujiTonsPicked = 0;
+var galaTonsPicked = 0;
+var pinkTonsPicked = 0;
 
-// let fujiPounds =
-// let galaPounds =
-// let pinkPounds =
+for (let e = 0; e < fujiTons.length; e++) {
+    fujiTonsPicked = fujiTonsPicked + fujiTons[e];
+}
+for (let e = 0; e < galaTons.length; e++) {
+    galaTonsPicked = galaTonsPicked + galaTons[e];
+}
+for (let e = 0; e < pinkTons.length; e++) {
+    pinkTonsPicked = pinkTonsPicked + pinkTons[e];
+}
 
+var fujiPounds = fujiTonsPicked * 2000;
+var galaPounds = galaTonsPicked * 2000;
+var pinkPounds = pinkTonsPicked * 2000;
 
-
-
-
+console.log(fujiPounds);
+console.log(galaPounds);
+console.log(pinkPounds);
 
 // PROBLEM 6
 
@@ -189,13 +245,13 @@ let days = 0
 
 // CODE HERE
 
-// let fujiProfit =
-// let galaProfit =
-// let pinkProfit =
+let fujiProfit = fujiPounds * fujiPrice;
+let galaProfit = galaPounds * galaPrice;
+let pinkProfit = pinkPounds * pinkPrice;
 
-
-
-
+console.log(fujiProfit);
+console.log(galaProfit);
+console.log(pinkProfit);
 
 
 // PROBLEM 7
@@ -209,3 +265,5 @@ let days = 0
 */
 
 // CODE HERE
+var totalProfit = fujiProfit + galaProfit + pinkProfit;
+console.log(totalProfit);
